@@ -3,7 +3,6 @@
 import { useMemo } from "react"
 import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { InfoIcon } from "lucide-react"
 import {
   Table,
   TableHeader,
@@ -193,7 +192,7 @@ export default function ClaimsView() {
                   <TableCell>
                     {hasOrder ? (
                       <Link
-                        href={`/wiaz/orders/${c.orderId}`}
+                        href={`/oms/orders/${c.orderId}`}
                         className="font-medium text-teal-700 hover:underline"
                       >
                         {c.orderId}

@@ -400,7 +400,7 @@ export default function OrdersView() {
               return (
                 <TableRow
                   key={o.id}
-                  onClick={() => router.push(`/wiaz/orders/${o.id}`)}
+                  onClick={() => router.push(`/oms/orders/${o.id}`)}
                   className={cn(
                     "cursor-pointer",
                     failed && "bg-amber-50 hover:bg-amber-100",
@@ -436,7 +436,7 @@ export default function OrdersView() {
                   </TableCell>
                   <TableCell>
                     <Link
-                      href={`/wiaz/orders/${o.id}`}
+                      href={`/oms/orders/${o.id}`}
                       onClick={(e) => e.stopPropagation()}
                       className="font-medium text-teal-700 hover:underline"
                     >

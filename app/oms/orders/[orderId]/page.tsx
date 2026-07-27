@@ -19,7 +19,7 @@ export default async function OrderDetailPage({
       <div className="mx-auto max-w-3xl px-8 py-16 text-center">
         <p className="text-lg font-semibold text-slate-900">주문을 찾을 수 없습니다</p>
         <Link
-          href="/wiaz/orders"
+          href="/oms/orders"
           className="mt-4 inline-block text-sm text-teal-700 hover:underline"
         >
           주문 목록으로 돌아가기
@@ -33,7 +33,7 @@ export default async function OrderDetailPage({
 
   return (
     <div className="mx-auto max-w-3xl px-8 py-8">
-      <Link href="/wiaz/orders" className="text-sm text-slate-500 hover:text-slate-800">
+      <Link href="/oms/orders" className="text-sm text-slate-500 hover:text-slate-800">
         ← 주문 목록
       </Link>
 

@@ -38,25 +38,25 @@ const TASK_CARDS: {
 }[] = [
   {
     label: "신규주문",
-    href: "/wiaz/orders?status=new",
+    href: "/oms/orders?status=new",
     count: ORDERS.filter((o) => o.status === "new").length,
     tone: "neutral",
   },
   {
     label: "발송지연",
-    href: "/wiaz/orders?status=delayed",
+    href: "/oms/orders?status=delayed",
     count: ORDERS.filter((o) => o.status === "delayed").length,
     tone: "warn",
   },
   {
     label: "클레임",
-    href: "/wiaz/claims",
+    href: "/oms/claims",
     count: CLAIMS.length,
     tone: "alert",
   },
   {
     label: "전송실패",
-    href: "/wiaz/orders?status=sync_failed",
+    href: "/oms/orders?status=sync_failed",
     count: ORDERS.filter((o) => o.status === "sync_failed").length,
     tone: "warn",
   },
@@ -182,7 +182,7 @@ export default function WiazDashboardPage() {
               {pipeline.map((stage) => (
                 <Link
                   key={stage.status}
-                  href={`/wiaz/orders?status=${stage.status}`}
+                  href={`/oms/orders?status=${stage.status}`}
                   className="flex items-center gap-3 rounded-lg px-2 py-2 transition-colors hover:bg-slate-50"
                 >
                   <span className="w-16 shrink-0 text-sm text-slate-600">

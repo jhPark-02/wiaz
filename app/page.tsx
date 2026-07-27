@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { DEMO_ACCOUNT, login } from "@/lib/auth"
-import logo from "./wiaz/wiaz_logo.png"
+import logo from "./oms/wiaz_logo.png"
 
 const INPUT =
   "h-auto rounded-lg border-slate-200 bg-white px-4 py-3 text-base text-slate-900 focus-visible:border-teal-700 focus-visible:ring-teal-800/10"
@@ -24,7 +24,7 @@ export default function WiazLoginPage() {
     }
 
     setError("")
-    router.push("/wiaz")
+    router.push("/oms")
   }
 
   return (

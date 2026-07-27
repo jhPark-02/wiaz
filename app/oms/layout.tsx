@@ -27,19 +27,19 @@ const NAV_GROUPS: {
   }[]
 }[] = [
   {
-    items: [{ href: "/wiaz", label: "대시보드", icon: ChartPie, exact: true }],
+    items: [{ href: "/oms", label: "대시보드", icon: ChartPie, exact: true }],
   },
   {
     heading: "주문 관리",
     items: [
-      { href: "/wiaz/orders", label: "주문 목록", icon: ListUnordered },
-      { href: "/wiaz/claims", label: "클레임", icon: CircleWarning },
-      { href: "/wiaz/shipping", label: "송장 업로드", icon: FileUpload },
+      { href: "/oms/orders", label: "주문 목록", icon: ListUnordered },
+      { href: "/oms/claims", label: "클레임", icon: CircleWarning },
+      { href: "/oms/shipping", label: "송장 업로드", icon: FileUpload },
     ],
   },
   {
     heading: "설정",
-    items: [{ href: "/wiaz/channels", label: "채널 현황", icon: Settings }],
+    items: [{ href: "/oms/channels", label: "채널 현황", icon: Settings }],
   },
 ]
 

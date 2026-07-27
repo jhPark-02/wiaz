@@ -59,7 +59,8 @@ export default function ClaimsView() {
   const baseFiltered = useMemo(() => {
     return CLAIMS.filter((c) => {
       if (channelParam !== "ALL" && c.channel !== channelParam) return false
-      if (statusParam !== "ALL" && c.status !== (statusParam as ClaimStatus)) return false
+      if (statusParam !== "ALL" && c.status !== (statusParam as ClaimStatus))
+        return false
       return true
     })
   }, [channelParam, statusParam])
@@ -77,12 +78,6 @@ export default function ClaimsView() {
       <p className="mt-1 text-sm text-slate-500">
         취소·반품·교환 요청을 한 화면에서 조회합니다.
       </p>
-
-      <div className="mt-4 flex items-center gap-1.5 rounded-lg bg-slate-100 px-4 py-2.5 text-sm text-slate-600">
-        <InfoIcon className="size-4 shrink-0 text-slate-400" />
-        클레임 조회는 전 채널 지원됩니다. 실제 처리(승인·거부)는 각 채널 판매자센터에서
-        진행합니다.
-      </div>
 
       <div className="mt-5 flex flex-wrap gap-1 border-b border-slate-200">
         <button
@@ -159,7 +154,10 @@ export default function ClaimsView() {
           <TableBody>
             {typeFiltered.length === 0 && (
               <TableRow>
-                <TableCell colSpan={8} className="py-12 text-center text-sm text-slate-400">
+                <TableCell
+                  colSpan={8}
+                  className="py-12 text-center text-sm text-slate-400"
+                >
                   조건에 맞는 클레임이 없습니다.
                 </TableCell>
               </TableRow>
@@ -173,7 +171,12 @@ export default function ClaimsView() {
                 <TableRow key={c.id}>
                   <TableCell>
                     <div className="flex items-center gap-1.5">
-                      <span className={cn("size-2 shrink-0 rounded-full", channel.dotColor)} />
+                      <span
+                        className={cn(
+                          "size-2 shrink-0 rounded-full",
+                          channel.dotColor,
+                        )}
+                      />
                       <span className="text-slate-700">{channel.label}</span>
                     </div>
                   </TableCell>
@@ -200,10 +203,16 @@ export default function ClaimsView() {
                     )}
                   </TableCell>
                   <TableCell className="text-slate-700">{c.customer}</TableCell>
-                  <TableCell className="max-w-48 truncate text-slate-700">{c.product}</TableCell>
+                  <TableCell className="max-w-48 truncate text-slate-700">
+                    {c.product}
+                  </TableCell>
                   <TableCell className="text-slate-600">{c.reason}</TableCell>
-                  <TableCell className="text-slate-600">{statusMeta.label}</TableCell>
-                  <TableCell className="text-slate-500">{c.requestedAt}</TableCell>
+                  <TableCell className="text-slate-600">
+                    {statusMeta.label}
+                  </TableCell>
+                  <TableCell className="text-slate-500">
+                    {c.requestedAt}
+                  </TableCell>
                 </TableRow>
               )
             })}

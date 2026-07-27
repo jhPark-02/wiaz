@@ -45,7 +45,7 @@ export default function UploadStep({
       )}
 
       <Button className="mt-5" onClick={handleValidate}>
-        검증하기
+        송장 업로드
       </Button>
     </div>
   )
